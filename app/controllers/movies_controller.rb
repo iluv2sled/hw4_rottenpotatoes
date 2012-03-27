@@ -61,6 +61,8 @@ class MoviesController < ApplicationController
   end
 
   def similar
+puts "id is #{:id}"
+puts "params is #{params}"
     @movie = Movie.find(params[:id])
     @movies = Movie.find_all_by_director(@movie.director)
 #debugger
